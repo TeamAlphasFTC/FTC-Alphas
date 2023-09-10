@@ -40,14 +40,14 @@ public class FIELDCodeSAHAS extends LinearOpMode {
         if (isStopRequested()) return;
 
         while (opModeIsActive()) {
-            double y = gamepad1.left_stick_y; // Remember, Y stick value is reversed
-            double x = -gamepad1.left_stick_x;
+            double y = -gamepad1.left_stick_y; 
+            double x = gamepad1.left_stick_x;
             double rx = gamepad1.right_stick_x;
 
             // This button choice was made so that it is hard to hit on accident,
             // it can be freely changed based on preference.
             // The equivalent button is start on Xbox-style controllers.
-            if (gamepad1.options) {
+            if (gamepad1.a) {
                 imu.resetYaw();
             }
 
